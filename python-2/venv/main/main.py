@@ -1,5 +1,5 @@
 def ejercicio_1():
-    print("Ingrese las 2 notas de los alumnos N1, N2, N3")
+    print("Ingrese las notas de los alumnos N1, N2, N3")
     n1 = int(input("Ingrese la nota de N1: "))
     n2 = int(input("Ingrese la nota de N2: "))
     n3 = int(input("Ingrese la nota de N3: "))
@@ -59,16 +59,18 @@ def ejercicio_5():
 
 def ejercicio_6():
     c = -1
-    i = 1
-    m = 1
+    i = -1
+    m = -1
     while c < 0 and (i <= 0 or i > 100) and m <= 100:
         print("Ingrese el capital, el interes y el tiempo apropiados")
-        c = int(input("Ingrese el capital: "))
-        i = int(input("Ingrese el interes: "))
-        m = int(input("Ingrese el tiempo: "))
-    for j in range(m):
+        c = float(input("Ingrese el capital: "))
+        i = float(input("Ingrese el interes: "))
+        m = float(input("Ingrese el tiempo: "))
+
+    for j in range(int(m - 1)):
         c = c * (1 + i / 100)
-    print("El capital final es: ", c, "€")
+
+    print("El capital final es: ", round(c, 3), "€")
 
 
 def ejercicio_7():
@@ -91,23 +93,23 @@ def ejercicio_7():
 
 def ejercicio_8():
     b = 2
-    for i in range(1, 29):
+    for i in range(2, 29):
         co = 0
-        for a in range(b / 2):
-            if b % a == 0:
-                co = co + a
+        for a in range(int(b / 2)):
+            if not(b % a == 0):
+                co = co + 1
                 a = b
-        if co == 0:
+        if not(co == 0):
             print("El cubo de ", b, " es: ", b ^ 3)
         b = b + 1
 
-def ejercicio_9():
 
+def ejercicio_9():
     ce = int(input("Ingrese la cantidad de empleados: "))
     i = 1
     c = 0
     smayor = float(0)
-    print ("Ingrese los sueldos")
+    print("Ingrese los sueldos")
     for i in range(ce):
         sueldo = float(input("Sueldo: "))
         if sueldo > smayor:
@@ -122,7 +124,7 @@ def ejercicio_10():
     n = int(input("Ingrese la cantidad de temperaturas: "))
     suma = 0
     media = 0
-    registroTemp= []
+    registroTemp = []
     c = 0
     for i in range(n):
         temp = float(input("Ingrese la temperatura: "))
@@ -137,3 +139,7 @@ def ejercicio_10():
 
     print("La media es: ", media)
     print("La cantidad de temperaturas mayores a la media es: ", c)
+
+ejercicio_8()
+ejercicio_9()
+ejercicio_10()
