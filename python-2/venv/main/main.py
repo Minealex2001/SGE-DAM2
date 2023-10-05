@@ -92,17 +92,18 @@ def ejercicio_7():
 
 
 def ejercicio_8():
-    b = 2
-    for i in range(2, 29):
-        co = 0
-        for a in range(int(b / 2)):
-            if not(b % a == 0):
-                co = co + 1
-                a = b
-        if not(co == 0):
-            print("El cubo de ", b, " es: ", b ^ 3)
-        b = b + 1
+    b = int(2)
 
+    for i in range(2, 29):
+        co = int(0)
+        if not(b % 2 == 0) or b == 2:
+            for a in range(2, int(b/2)):
+                if b % a == 0:
+                    co += 1
+                    a = b
+            if co == 0:
+                print(f'El cubo de {b} es {pow(b, 3)}')
+        b += 1
 
 def ejercicio_9():
     ce = int(input("Ingrese la cantidad de empleados: "))
@@ -139,7 +140,3 @@ def ejercicio_10():
 
     print("La media es: ", media)
     print("La cantidad de temperaturas mayores a la media es: ", c)
-
-ejercicio_8()
-ejercicio_9()
-ejercicio_10()
