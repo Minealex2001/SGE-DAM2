@@ -38,3 +38,43 @@ def ejercicio_2():
     else:
         print("La palabra no es un palíndromo.")
 
+
+def ejercicio_3():
+    platos = {
+        "Pasta": {
+            "Espaguetis": 7,
+            "Macarrones": 7,
+            "Fusili": 8
+        },
+        "Pizza": {
+            "Clasica": 8,
+            "Integral": 9
+        },
+        "Salas": {
+            "Carbonara": 3,
+            "Rabiosa": 2,
+            "Pesto Verde": 2.75,
+            "Pesto Rojo": 3,
+            "Boloñesa": 2.5
+        },
+        "IngredientesPizza": {
+            "Extra de queso": 1,
+            "Queso azul": 2,
+            "Salchicha": 1.5,
+            "Carne": 2,
+            "Chorizo": 2.5,
+            "Jamón": 3,
+            "Pimiento Verde": 1,
+            "Aceitunas": 1.5,
+            "Anchoas": 3,
+            "Atún": 2.5,
+            "Salmón": 3,
+            "Piña": 1.5
+        },
+        "Postres": {
+            "Tiramisú": 6,
+            "Panna Cotta": 5.5,
+        }
+    }
+
+
